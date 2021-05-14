@@ -1,0 +1,49 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Service", "1 - Service", "{9AA89F15-D398-4099-89B0-9B848DC1A816}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{0009D1FB-12DF-475F-9C83-647B1830B935}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{60B97D8B-49A0-4983-A6B7-043BD59AAABA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{60C39A31-022F-474D-BF28-95936CB5B4FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCA.Assets.Api", "SCA.Assets.Api\SCA.Assets.Api.csproj", "{6CE19667-7629-488D-9480-6EEBC93BAE5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCA.Assets.Application", "SCA.Assets.Application\SCA.Assets.Application.csproj", "{D228F116-8BC2-48F5-A7FA-B1C0F154B29A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCA.Assets.Domain", "SCA.Assets.Domain\SCA.Assets.Domain.csproj", "{C0C8007A-25DF-482B-9B0D-2DCB6B04E0B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCA.Assets.Data", "SCA.Assets.Infra\SCA.Assets.Data.csproj", "{F6E33DB2-FC72-4F32-9B0B-ADFDB5C967F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CE19667-7629-488D-9480-6EEBC93BAE5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CE19667-7629-488D-9480-6EEBC93BAE5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CE19667-7629-488D-9480-6EEBC93BAE5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CE19667-7629-488D-9480-6EEBC93BAE5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D228F116-8BC2-48F5-A7FA-B1C0F154B29A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D228F116-8BC2-48F5-A7FA-B1C0F154B29A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D228F116-8BC2-48F5-A7FA-B1C0F154B29A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D228F116-8BC2-48F5-A7FA-B1C0F154B29A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0C8007A-25DF-482B-9B0D-2DCB6B04E0B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0C8007A-25DF-482B-9B0D-2DCB6B04E0B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0C8007A-25DF-482B-9B0D-2DCB6B04E0B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0C8007A-25DF-482B-9B0D-2DCB6B04E0B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6E33DB2-FC72-4F32-9B0B-ADFDB5C967F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6E33DB2-FC72-4F32-9B0B-ADFDB5C967F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6E33DB2-FC72-4F32-9B0B-ADFDB5C967F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6E33DB2-FC72-4F32-9B0B-ADFDB5C967F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6CE19667-7629-488D-9480-6EEBC93BAE5F} = {9AA89F15-D398-4099-89B0-9B848DC1A816}
+		{D228F116-8BC2-48F5-A7FA-B1C0F154B29A} = {0009D1FB-12DF-475F-9C83-647B1830B935}
+		{C0C8007A-25DF-482B-9B0D-2DCB6B04E0B0} = {60B97D8B-49A0-4983-A6B7-043BD59AAABA}
+		{F6E33DB2-FC72-4F32-9B0B-ADFDB5C967F5} = {60C39A31-022F-474D-BF28-95936CB5B4FF}
+	EndGlobalSection
+EndGlobal
