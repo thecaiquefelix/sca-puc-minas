@@ -1,0 +1,56 @@
+<mat-toolbar>Monitoramento de barragens</mat-toolbar>
+
+<div class="componente-container">
+
+    <mat-form-field>
+        <select matNativeControl required>
+            <option value="volvo">MG</option>
+            <option value="saab">ES</option>
+            <option value="mercedes">BA</option>
+        </select>
+    </mat-form-field>
+
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>
+            <canvas #deslocamento></canvas>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <canvas #piezometro></canvas>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <canvas #inclinometro></canvas>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <canvas #agua></canvas>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+
+
+
+<!-- <mat-toolbar>Monitoracao</mat-toolbar>
+
+<div>
+
+    <div style="margin: 1%;">
+
+    <mat-form-field>
+        <mat-label>Barragem</mat-label>
+        <select matNativeControl required>
+            <option value="volvo">MG</option>
+            <option value="saab">ES</option>
+            <option value="mercedes">BA</option>
+        </select>
+    </mat-form-field>
+
+    <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile>
+            <canvas #meuCanvas></canvas>
+        </mat-grid-tile>
+        <mat-grid-tile>2</mat-grid-tile>
+        <mat-grid-tile>3</mat-grid-tile>
+        <mat-grid-tile>4</mat-grid-tile>
+        </mat-grid-list>
+    </div>
+
+</div> -->

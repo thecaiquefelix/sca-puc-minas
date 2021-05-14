@@ -1,17 +1,17 @@
 <mat-grid-list cols="1" rowHeight="3:2">
-    <mat-grid-tile>
+    <mat-grid-tile style="text-align: center;">
         <form class="form-padrao" *ngIf="formGroup" [formGroup]="formGroup" (ngSubmit)="formGroup.valid && submitLogin()" novalidate> 
-            <mat-form-field>
+            <mat-form-field style="text-align: center;">
                 <input matInput placeholder="Usuario" formControlName="username" required autocomplete="off"> 
                 <mat-error>Campo obrigatorio</mat-error>
             </mat-form-field>
     
-            <mat-form-field>
+            <mat-form-field style="text-align: center;">
                 <input type="password" matInput placeholder="Senha" formControlName="password" required autocomplete="off">
                 <mat-error>Campo obrigatorio</mat-error>
             </mat-form-field>
     
-            <div style="text-align: center;">
+            <div>
                 <button mat-raised-button color="primary" [disabled]="!formGroup.valid">Entrar</button>
             </div>
         </form>

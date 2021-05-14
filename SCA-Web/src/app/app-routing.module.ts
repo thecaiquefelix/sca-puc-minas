@@ -37,6 +37,10 @@ const routes: Routes = [
       { 
         path: "maintenances/update/:id",
         loadChildren: () => import('./maintenances/maintenance-insert-update/maintenance-insert-update.module').then(module => module.MaintenanceInsertUpdateModule)
+      },
+      {
+        path: "monitors",
+        loadChildren: () => import('./monitors/monitors-list/monitors-list.module').then(module => module.MonitorsListModule)
       }
     ], canActivate: [AuthGuard]
   },
