@@ -13,7 +13,7 @@ namespace SCA.Gateway.Controllers
         [HttpGet("dam/{damId:int}/metric/{metricId:int}")]
         public async Task<IActionResult> GetAllAsync(int damId, int metricId)
         {
-            var url = $"{baseURL}/api/v1/monitors/dam/{damId:int}/metric/{metricId:int}";
+            var url = $"{baseURL}/api/v1/monitors/dam/{damId}/metric/{metricId}";
 
             return await GetListAsync<Monitor>(url);
         }
