@@ -1,0 +1,49 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Service", "1 - Service", "{9AA89F15-D398-4099-89B0-9B848DC1A816}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{0009D1FB-12DF-475F-9C83-647B1830B935}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{60B97D8B-49A0-4983-A6B7-043BD59AAABA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{60C39A31-022F-474D-BF28-95936CB5B4FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCA.Monitors.Domain", "SCA.Monitors.Domain\SCA.Monitors.Domain.csproj", "{14C8626E-0C3E-494F-98FE-BF2219AA96FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCA.Monitors.Data", "SCA.Monitors.Infra\SCA.Monitors.Data.csproj", "{3883254C-9F27-49C0-860F-D752A1D9384D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCA.Monitors.Application", "SCA.Monitors.Application\SCA.Monitors.Application.csproj", "{65301561-F77C-4A32-92C4-E6E43406859E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCA.Monitors.Api", "SCA.Monitors.Api\SCA.Monitors.Api.csproj", "{92FA7409-B443-4FFF-8A06-52A9F1404174}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14C8626E-0C3E-494F-98FE-BF2219AA96FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14C8626E-0C3E-494F-98FE-BF2219AA96FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14C8626E-0C3E-494F-98FE-BF2219AA96FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14C8626E-0C3E-494F-98FE-BF2219AA96FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3883254C-9F27-49C0-860F-D752A1D9384D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3883254C-9F27-49C0-860F-D752A1D9384D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3883254C-9F27-49C0-860F-D752A1D9384D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3883254C-9F27-49C0-860F-D752A1D9384D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65301561-F77C-4A32-92C4-E6E43406859E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65301561-F77C-4A32-92C4-E6E43406859E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65301561-F77C-4A32-92C4-E6E43406859E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65301561-F77C-4A32-92C4-E6E43406859E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92FA7409-B443-4FFF-8A06-52A9F1404174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92FA7409-B443-4FFF-8A06-52A9F1404174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92FA7409-B443-4FFF-8A06-52A9F1404174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92FA7409-B443-4FFF-8A06-52A9F1404174}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{14C8626E-0C3E-494F-98FE-BF2219AA96FC} = {60B97D8B-49A0-4983-A6B7-043BD59AAABA}
+		{3883254C-9F27-49C0-860F-D752A1D9384D} = {60C39A31-022F-474D-BF28-95936CB5B4FF}
+		{65301561-F77C-4A32-92C4-E6E43406859E} = {0009D1FB-12DF-475F-9C83-647B1830B935}
+		{92FA7409-B443-4FFF-8A06-52A9F1404174} = {9AA89F15-D398-4099-89B0-9B848DC1A816}
+	EndGlobalSection
+EndGlobal
