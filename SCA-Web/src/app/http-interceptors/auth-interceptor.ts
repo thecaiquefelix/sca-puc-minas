@@ -17,7 +17,6 @@ export class AuthInterceptor implements HttpInterceptor {
     let request: HttpRequest<any> = req;
 
     if (token && !this.accountService.isTokenExpired(token)) {
-      console.log("Aquii")
       request = req.clone({
         headers: req.headers.set('Authorization', `Bearer ${token}`)
       });

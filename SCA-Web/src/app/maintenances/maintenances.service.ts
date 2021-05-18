@@ -9,7 +9,7 @@ import { Asset } from '../assets/asset.model';
 })
 export class MaintenancesService {
  
-  private baseURL = "http://localhost:5000";
+  private baseURL = "https://localhost:5001"
   private endpoint = "api/v1/maintenances";
   private endpointAssets = "api/v1/assets";
 
