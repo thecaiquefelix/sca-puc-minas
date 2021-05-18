@@ -25,142 +25,142 @@ namespace SCA.Sensors
                     {
                         connection.Open();
 
-                        var time = DateTime.Now.TimeOfDay;
+                        var date = DateTime.Now;
 
                         var deslocamentoItaipu = random.Next(-10, 10);
-                        var piezometriaItaipu = random.Next(-10, 10);
+                        var piezometriaItaipu = random.Next(0, 10);
                         var inclinometroItaipu = random.Next(-10, 10);
-                        var aguaItaipu = random.Next(-10, 10);
+                        var aguaItaipu = random.Next(-20, 20);
 
                         var deslocamentoMascarenhas = random.Next(-10, 10);
-                        var piezometriaMascarenhas = random.Next(-10, 10);
+                        var piezometriaMascarenhas = random.Next(0, 10);
                         var inclinometroMascarenhas = random.Next(-10, 10);
-                        var aguaMascarenhas = random.Next(-10, 10);
+                        var aguaMascarenhas = random.Next(-20, 20);
 
                         var deslocamentoSobradinho = random.Next(-10, 10);
-                        var piezometriaSobradinho = random.Next(-10, 10);
+                        var piezometriaSobradinho = random.Next(0, 10);
                         var inclinometroSobradinho = random.Next(-10, 10);
-                        var aguaSobradinho = random.Next(-10, 10);
+                        var aguaSobradinho = random.Next(-20, 20);
 
                         var sql = $"INSERT [DatabaseSCA].[dbo].[Sensors]" +
                                         $" ([DamId] " +
                                         $",[MetricId] " +
-                                        $",[Time] " +
+                                        $",[Date] " +
                                         $",[Value]) " +
                                         $" VALUES  " +
                                         $" (1 " +
                                         $" , 1 " +
-                                        $" , '{time}' " +
+                                        $" , '{date}' " +
                                         $" , {deslocamentoItaipu}); " +
                                    $"INSERT [DatabaseSCA].[dbo].[Sensors]" +
                                         $" ([DamId] " +
                                         $",[MetricId] " +
-                                        $",[Time] " +
+                                        $",[Date] " +
                                         $",[Value]) " +
                                         $" VALUES  " +
                                         $" (1 " +
                                         $" , 2 " +
-                                        $" , '{time}' " +
+                                        $" , '{date}' " +
                                         $" , {piezometriaItaipu}); " +
                                    $"INSERT [DatabaseSCA].[dbo].[Sensors]" +
                                         $" ([DamId] " +
                                         $",[MetricId] " +
-                                        $",[Time] " +
+                                        $",[Date] " +
                                         $",[Value]) " +
                                         $" VALUES  " +
                                         $" (1 " +
                                         $" , 3 " +
-                                        $" , '{time}' " +
+                                        $" , '{date}' " +
                                         $" , {inclinometroItaipu}); " +
                                     $"INSERT [DatabaseSCA].[dbo].[Sensors]" +
                                         $" ([DamId] " +
                                         $",[MetricId] " +
-                                        $",[Time] " +
+                                        $",[Date] " +
                                         $",[Value]) " +
                                         $" VALUES  " +
                                         $" (1 " +
                                         $" , 4 " +
-                                        $" , '{time}' " +
+                                        $" , '{date}' " +
                                         $" , {aguaItaipu}); " +
                                     $"INSERT [DatabaseSCA].[dbo].[Sensors]" +
                                         $" ([DamId] " +
                                         $",[MetricId] " +
-                                        $",[Time] " +
+                                        $",[Date] " +
                                         $",[Value]) " +
                                         $" VALUES  " +
                                         $" (2 " +
                                         $" , 1 " +
-                                        $" , '{time}' " +
+                                        $" , '{date}' " +
                                         $" , {deslocamentoMascarenhas}); " +
                                    $"INSERT [DatabaseSCA].[dbo].[Sensors]" +
                                         $" ([DamId] " +
                                         $",[MetricId] " +
-                                        $",[Time] " +
+                                        $",[Date] " +
                                         $",[Value]) " +
                                         $" VALUES  " +
                                         $" (2 " +
                                         $" , 2 " +
-                                        $" , '{time}' " +
+                                        $" , '{date}' " +
                                         $" , {piezometriaMascarenhas}); " +
                                    $"INSERT [DatabaseSCA].[dbo].[Sensors]" +
                                         $" ([DamId] " +
                                         $",[MetricId] " +
-                                        $",[Time] " +
+                                        $",[Date] " +
                                         $",[Value]) " +
                                         $" VALUES  " +
                                         $" (2 " +
                                         $" , 3 " +
-                                        $" , '{time}' " +
+                                        $" , '{date}' " +
                                         $" , {inclinometroMascarenhas}); " +
                                     $"INSERT [DatabaseSCA].[dbo].[Sensors]" +
                                         $" ([DamId] " +
                                         $",[MetricId] " +
-                                        $",[Time] " +
+                                        $",[Date] " +
                                         $",[Value]) " +
                                         $" VALUES  " +
                                         $" (2 " +
                                         $" , 4 " +
-                                        $" , '{time}' " +
+                                        $" , '{date}' " +
                                         $" , {aguaMascarenhas}); " +
                                     $"INSERT [DatabaseSCA].[dbo].[Sensors]" +
                                         $" ([DamId] " +
                                         $",[MetricId] " +
-                                        $",[Time] " +
+                                        $",[Date] " +
                                         $",[Value]) " +
                                         $" VALUES  " +
                                         $" (3 " +
                                         $" , 1 " +
-                                        $" , '{time}' " +
+                                        $" , '{date}' " +
                                         $" , {deslocamentoSobradinho}); " +
                                    $"INSERT [DatabaseSCA].[dbo].[Sensors]" +
                                         $" ([DamId] " +
                                         $",[MetricId] " +
-                                        $",[Time] " +
+                                        $",[Date] " +
                                         $",[Value]) " +
                                         $" VALUES  " +
                                         $" (3 " +
                                         $" , 2 " +
-                                        $" , '{time}' " +
+                                        $" , '{date}' " +
                                         $" , {piezometriaSobradinho}); " +
                                    $"INSERT [DatabaseSCA].[dbo].[Sensors]" +
                                         $" ([DamId] " +
                                         $",[MetricId] " +
-                                        $",[Time] " +
+                                        $",[Date] " +
                                         $",[Value]) " +
                                         $" VALUES  " +
                                         $" (3 " +
                                         $" , 3 " +
-                                        $" , '{time}' " +
+                                        $" , '{date}' " +
                                         $" , {inclinometroSobradinho}); " +
                                     $"INSERT [DatabaseSCA].[dbo].[Sensors]" +
                                         $" ([DamId] " +
                                         $",[MetricId] " +
-                                        $",[Time] " +
+                                        $",[Date] " +
                                         $",[Value]) " +
                                         $" VALUES  " +
                                         $" (3 " +
                                         $" , 4 " +
-                                        $" , '{time}' " +
+                                        $" , '{date}' " +
                                         $" , {aguaSobradinho}); ";
 
                         using (SqlCommand command = new SqlCommand(sql, connection))
