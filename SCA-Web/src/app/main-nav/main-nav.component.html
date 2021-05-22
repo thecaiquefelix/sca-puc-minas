@@ -6,9 +6,10 @@
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="">Home</a>
-      <a mat-list-item routerLink="assets">Ativos</a>
-      <a mat-list-item routerLink="maintenances">Manutenção</a>
-      <a mat-list-item routerLink="monitors">Monitoração</a>
+      <a mat-list-item routerLink="assets" *ngIf="enableMenu(['admin', 'maintenance'])">Ativos</a>
+      <a mat-list-item routerLink="maintenances" *ngIf="enableMenu(['admin'])">Manutenção</a>
+      <a mat-list-item routerLink="monitors" *ngIf="enableMenu(['admin'])">Monitoração</a>
+      <a mat-list-item (click)="logout()">Sair</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

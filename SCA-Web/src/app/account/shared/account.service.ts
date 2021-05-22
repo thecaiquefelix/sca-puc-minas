@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { stringify } from '@angular/compiler/src/util';
 import { Injectable } from '@angular/core';
 import jwt_decode from 'jwt-decode';
 
@@ -17,6 +18,7 @@ export class AccountService {
     const result = await this.httpClient.post<any>(`https://localhost:5001/v1/account/login`, user).toPromise();
     if(result && result.token){
       window.localStorage.setItem("token", result.token);
+      window.localStorage.setItem("role", result.user.role);
       return true;
     }
 
@@ -26,6 +28,17 @@ export class AccountService {
   getAuthorizationToken() {
     const token = window.localStorage.getItem('token');
     return token;
+  }
+
+  containsRole(values:string[]) {
+    const role = window.localStorage.getItem('role');
+    let roles = role?.toString().split(';') ?? [];
+    let result = roles.some(r=> values.indexOf(r) >= 0);
+    return result;
+  }
+
+  logout(){
+    window.localStorage.clear();
   }
 
   getTokenExpirationDate(token: string): Date {

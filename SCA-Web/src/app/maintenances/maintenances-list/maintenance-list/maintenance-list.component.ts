@@ -11,7 +11,6 @@ import { MaintenancesService } from '../../maintenances.service';
 export class MaintenanceListComponent implements OnInit {
 
   maintenances$!: Observable<Maintenance[]>;
-  todayDate = Date.now();
 
   colunasTabela = ['assetName','type','status','date'];
 
@@ -33,9 +32,17 @@ export class MaintenanceListComponent implements OnInit {
     return Status[status];
   }
 
-  validPeriod(dateMaintenance:Date){
-    var today = new Date();
-    return dateMaintenance < today;
-  }
+  // validPeriod(dateMaintenance:Date){
+  //   var today = new Date();
+  //   return dateMaintenance < today;
+  // }
 
+  validPeriod(dateMaintenance:Date){
+    let today = new Date();
+    today.setHours(0,0,0,0);
+    let date = new Date(dateMaintenance);
+ 
+    let result = date.getTime() < today.getTime();
+    return result;
+  }
 }

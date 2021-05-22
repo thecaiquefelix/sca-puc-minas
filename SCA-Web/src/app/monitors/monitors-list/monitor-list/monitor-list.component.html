@@ -1,28 +1,38 @@
 <mat-toolbar>Monitoramento de barragens</mat-toolbar>
 
-<div class="componente-container">
-    <div>
-        <mat-form-field>
-            <select matNativeControl [(ngModel)]="selectedDam">
-                <option [ngValue]="1">Brumadinho</option>
-                <option [ngValue]="2">Xingó</option>
-                <option [ngValue]="3">Foz do Areia</option>
-            </select>
-        </mat-form-field>
-  </div>
+<div class="container">
+    <div class="row">
+        <div class="col" style="align-self: center;">
+            <mat-form-field>
+                <select matNativeControl [(ngModel)]="selectedDam">
+                    <option [ngValue]="1">Brumadinho</option>
+                    <option [ngValue]="2">Xingó</option>
+                    <option [ngValue]="3">Foz do Areia</option>
+                </select>
+            </mat-form-field>
+        </div>
+        <div class="col" style="align-self: center; text-align: end;">
+            <button type="button" mat-raised-button color="primary" routerLink="/assets" >Enviar alerta 🚨</button>
+        </div>
+    </div>
+</div>
 
-    <mat-grid-list cols="2" rowHeight="2:1">
-        <mat-grid-tile>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
             <canvas #deslocamento></canvas>
-        </mat-grid-tile>
-        <mat-grid-tile>
-            <canvas #piezometro></canvas>
-        </mat-grid-tile>
-        <mat-grid-tile>
+        </div>
+        <div class="col">
+            <canvas #piezometro></canvas
+        ></div>
+      </div>
+      <div class="row">
+        <div class="col">
             <canvas #inclinometro></canvas>
-        </mat-grid-tile>
-        <mat-grid-tile>
+        </div>
+        <div class="col">
             <canvas #agua></canvas>
-        </mat-grid-tile>
-    </mat-grid-list>
+        </div>
+      </div>
 </div>
