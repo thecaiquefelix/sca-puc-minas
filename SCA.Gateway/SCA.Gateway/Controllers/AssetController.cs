@@ -12,7 +12,7 @@ namespace SCA.Gateway.Controllers
         const string baseURL = "http://localhost:5000";
 
         [HttpGet]
-        [Authorize]
+        [Authorize(Roles = "admin,maintenance")]
         public async Task<IActionResult> GetAllAsync()
         {
             var url = $"{baseURL}/api/v1/assets";
@@ -21,7 +21,7 @@ namespace SCA.Gateway.Controllers
         }
 
         [HttpGet("{id:int}")]
-        [Authorize]
+        [Authorize(Roles = "admin,maintenance")]
         public async Task<IActionResult> GetByIdAsync(int id)
         {
             var url = $"{baseURL}/api/v1/assets/{id}";
@@ -30,7 +30,7 @@ namespace SCA.Gateway.Controllers
         }
 
         [HttpPost]
-        [Authorize]
+        [Authorize(Roles = "admin,maintenance")]
         public async Task<IActionResult> InsertAsync([FromBody]Asset asset)
         {
             var url = $"{baseURL}/api/v1/assets";
@@ -39,7 +39,7 @@ namespace SCA.Gateway.Controllers
         }
 
         [HttpPut]
-        [Authorize]
+        [Authorize(Roles = "admin,maintenance")]
         public async Task<IActionResult> UpdateAsync([FromBody]Asset asset)
         {
             var url = $"{baseURL}/api/v1/assets";
@@ -48,7 +48,7 @@ namespace SCA.Gateway.Controllers
         }
 
         [HttpDelete("{id:int}")]
-        [Authorize]
+        [Authorize(Roles = "admin,maintenance")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             var url = $"{baseURL}/api/v1/assets/{id}";
