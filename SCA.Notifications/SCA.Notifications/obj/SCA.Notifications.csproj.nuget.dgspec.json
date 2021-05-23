@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/caique/Projects/SCA.Notifications/SCA.Notifications/SCA.Notifications.csproj": {}
+    "/Users/caique/Projects/sca-puc-minas/SCA.Notifications/SCA.Notifications/SCA.Notifications.csproj": {}
   },
   "projects": {
-    "/Users/caique/Projects/SCA.Notifications/SCA.Notifications/SCA.Notifications.csproj": {
+    "/Users/caique/Projects/sca-puc-minas/SCA.Notifications/SCA.Notifications/SCA.Notifications.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/caique/Projects/SCA.Notifications/SCA.Notifications/SCA.Notifications.csproj",
+        "projectUniqueName": "/Users/caique/Projects/sca-puc-minas/SCA.Notifications/SCA.Notifications/SCA.Notifications.csproj",
         "projectName": "SCA.Notifications",
-        "projectPath": "/Users/caique/Projects/SCA.Notifications/SCA.Notifications/SCA.Notifications.csproj",
+        "projectPath": "/Users/caique/Projects/sca-puc-minas/SCA.Notifications/SCA.Notifications/SCA.Notifications.csproj",
         "packagesPath": "/Users/caique/.nuget/packages/",
-        "outputPath": "/Users/caique/Projects/SCA.Notifications/SCA.Notifications/obj/",
+        "outputPath": "/Users/caique/Projects/sca-puc-minas/SCA.Notifications/SCA.Notifications/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
