@@ -56,6 +56,18 @@
               "version": "[2.2.0, )",
               "autoReferenced": true
             },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[6.1.4, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[6.1.4, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[6.1.4, )"
+            },
             "Twilio": {
               "target": "Package",
               "version": "[5.60.0, )"

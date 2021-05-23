@@ -1,17 +1,22 @@
 ﻿<Properties StartupConfiguration="{2A02A303-354B-44DD-87BC-989BC0FA6D00}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SCA.Notifications/Controllers/NotificationController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SCA.Notifications/Properties/launchSettings.json">
     <Files>
       <File FileName="SCA.Notifications/appsettings.json" Line="2" Column="15" />
-      <File FileName="SCA.Notifications/Program.cs" />
-      <File FileName="SCA.Notifications/Startup.cs" />
-      <File FileName="SCA.Notifications/Controllers/NotificationController.cs" Line="25" Column="1" />
+      <File FileName="SCA.Notifications/Program.cs" Line="1" Column="1" />
+      <File FileName="SCA.Notifications/Startup.cs" Line="21" Column="32" />
+      <File FileName="SCA.Notifications/Controllers/NotificationController.cs" Line="26" Column="15" />
+      <File FileName="SCA.Notifications/Domain/Notification.cs" Line="7" Column="6" />
+      <File FileName="SCA.Notifications/appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="SCA.Notifications/Properties/launchSettings.json" Line="24" Column="47" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="SCA.Notifications" expanded="True" selected="True">
+          <Node name="SCA.Notifications" expanded="True">
             <Node name="SCA.Notifications" expanded="True">
-              <Node name="Controllers" expanded="True" />
+              <Node name="Properties" expanded="True">
+                <Node name="launchSettings.json" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -23,7 +28,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/caique/Projects/sca-puc-minas/SCA.Notifications/SCA.Notifications/Controllers/NotificationController.cs" relfile="SCA.Notifications/Controllers/NotificationController.cs" line="14" column="1" />
+      <Breakpoint file="/Users/caique/Projects/sca-puc-minas/SCA.Notifications/SCA.Notifications/Controllers/NotificationController.cs" relfile="SCA.Notifications/Controllers/NotificationController.cs" line="16" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />

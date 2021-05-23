@@ -41,6 +41,10 @@ const routes: Routes = [
       {
         path: "monitors",
         loadChildren: () => import('./monitors/monitors-list/monitors-list.module').then(module => module.MonitorsListModule)
+      },
+      {
+        path: "notifications/insert",
+        loadChildren: () => import('./notifications/notifications-insert/notifications-insert.module').then(module => module.NotificationsInsertModule)
       }
     ], canActivate: [AuthGuard]
   },

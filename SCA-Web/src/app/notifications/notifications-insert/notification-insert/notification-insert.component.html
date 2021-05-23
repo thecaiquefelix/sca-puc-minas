@@ -1,0 +1,29 @@
+<mat-toolbar>Envio de alerta 🚨</mat-toolbar>
+
+<ng-template #carregando>
+    <mat-spinner></mat-spinner>
+ </ng-template>
+
+<div class="componente-container">
+    <form class="form-padrao" *ngIf="formGroup" [formGroup]="formGroup" (ngSubmit)="formGroup.valid && send()" novalidate>      
+
+        <mat-form-field>
+            <select matNativeControl formControlName="damId" required>
+                <option [ngValue]="1">Brumadinho</option>
+                <option [ngValue]="2">Xingó</option>
+                <option [ngValue]="3">Foz do Areia</option>
+            </select>
+            <mat-error>Campo obrigatorio</mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+            <textarea matInput formControlName="message" placeholder="Mensagem que sera enviada..."></textarea>
+            <mat-error>Campo obrigatorio</mat-error>
+        </mat-form-field>
+
+        <div class="linha-botoes">
+            <button mat-raised-button color="primary" [disabled]="!formGroup.valid">Enviar</button>
+            <button type="button" mat-raised-button color="primary" routerLink="/monitors" >Cancelar</button>
+        </div>
+    </form>
+</div>
