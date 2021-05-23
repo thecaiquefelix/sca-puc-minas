@@ -14,15 +14,15 @@ namespace SCA.Notifications.Controllers
         [HttpPost]
         public async Task<IActionResult> SendAsync([FromBody] Notification notification)
         {
-            string accountSid = "AC8704b0d533d5f618957f1dc1e21b7e87";
-            string authToken = "f90779d288805434027b96c1147f9f8b";
+            string accountSid = "";
+            string authToken = "";
 
             TwilioClient.Init(accountSid, authToken);
 
             var message = MessageResource.Create(
                 body: notification.Message,
-                from: new Twilio.Types.PhoneNumber("+14432513359"),
-                to: new Twilio.Types.PhoneNumber("+5511989030338")
+                from: new Twilio.Types.PhoneNumber(""),
+                to: new Twilio.Types.PhoneNumber("")
             );
 
             return Ok();
