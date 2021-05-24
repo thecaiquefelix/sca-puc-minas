@@ -7,7 +7,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,8 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     CommonModule,
     MaintenancesListRoutingModule,
+    MatSortModule,
+    MatPaginatorModule,
     MatTableModule,
     MatProgressSpinnerModule,
     MatToolbarModule,

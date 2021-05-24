@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { AssetsService } from '../../assets.service';
-import { Observable } from 'rxjs';
 import { Asset, Manufacturer, Category } from '../../asset.model';
+import { MatPaginator } from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-asset-list',
@@ -9,19 +11,23 @@ import { Asset, Manufacturer, Category } from '../../asset.model';
   styleUrls: ['./asset-list.component.scss']
 })
 export class AssetListComponent implements OnInit {
-
-  assets$!: Observable<Asset[]>;
-
   colunasTabela = ['name', 'manufacturer', 'category','manufactureDate','serial'];
+  dataSource!: MatTableDataSource<Asset>;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
 
   constructor(private assetsService: AssetsService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
     this.listItens();
   }
 
   listItens(){
-    this.assets$ = this.assetsService.list();
+    this.assetsService.list().subscribe(assets => {
+      this.dataSource = new MatTableDataSource(assets);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    });
   }
 
   Manufacturer(manufacturer:number){

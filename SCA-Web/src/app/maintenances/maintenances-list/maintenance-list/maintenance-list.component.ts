@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Maintenance, Type, Status } from '../../maintenance.model';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MaintenancesService } from '../../maintenances.service';
+import { Maintenance, Type, Status } from '../../maintenance.model';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-maintenance-list',
@@ -9,19 +11,23 @@ import { MaintenancesService } from '../../maintenances.service';
   styleUrls: ['./maintenance-list.component.scss']
 })
 export class MaintenanceListComponent implements OnInit {
-
-  maintenances$!: Observable<Maintenance[]>;
-
   colunasTabela = ['assetName','type','status','date'];
+  dataSource!: MatTableDataSource<Maintenance>;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort!: MatSort;
 
   constructor(private maintenancesService: MaintenancesService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
     this.list();
   }
 
   list(){
-    this.maintenances$ = this.maintenancesService.list();
+    this.maintenancesService.list().subscribe(maintenances => {
+      this.dataSource = new MatTableDataSource(maintenances);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    });
   }
 
   Type(type:number){
@@ -31,11 +37,6 @@ export class MaintenanceListComponent implements OnInit {
   Status(status:number){
     return Status[status];
   }
-
-  // validPeriod(dateMaintenance:Date){
-  //   var today = new Date();
-  //   return dateMaintenance < today;
-  // }
 
   validPeriod(dateMaintenance:Date){
     let today = new Date();
