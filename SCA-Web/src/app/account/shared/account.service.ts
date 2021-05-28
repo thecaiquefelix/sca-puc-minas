@@ -1,7 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { stringify } from '@angular/compiler/src/util';
 import { Injectable } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
 import jwt_decode from 'jwt-decode';
+
+export interface Token
+{
+  role: string
+}
 
 @Injectable({
   providedIn: 'root'
@@ -14,11 +20,9 @@ export class AccountService {
   constructor(private httpClient: HttpClient) { }
 
   async login(user: any){
-    console.log(user);
     const result = await this.httpClient.post<any>(`https://localhost:5001/v1/account/login`, user).toPromise();
     if(result && result.token){
       window.localStorage.setItem("token", result.token);
-      window.localStorage.setItem("role", result.user.role);
       return true;
     }
 
@@ -31,8 +35,9 @@ export class AccountService {
   }
 
   containsRole(values:string[]) {
-    const role = window.localStorage.getItem('role');
-    let roles = role?.toString().split(';') ?? [];
+    const tokenLocalStorage : string | any = window.localStorage.getItem('token');
+    let token : Token = jwt_decode(tokenLocalStorage);
+    let roles = token?.role?.toString().split(';') ?? [];
     let result = roles.some(r=> values.indexOf(r) >= 0);
     return result;
   }

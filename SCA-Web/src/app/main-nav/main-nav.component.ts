@@ -22,7 +22,6 @@ export class MainNavComponent {
 
   enableMenu(roles:string[])
   {
-    console.log(roles);
     return this.accountService.containsRole(roles);
   }
 
