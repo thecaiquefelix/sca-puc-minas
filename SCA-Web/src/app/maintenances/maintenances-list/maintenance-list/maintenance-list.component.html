@@ -31,8 +31,8 @@
 
             <ng-container matColumnDef="date">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header>Data agendamento</th>
-                <td mat-cell *matCellDef="let maintenance" [ngStyle]="{'color': validPeriod(maintenance.date) ? 'red' : 'black'}">
-                    {{maintenance.date | date:'yyyy-MM-dd' }} {{ validPeriod(maintenance.date) ? '⚠️' : '' }}
+                <td mat-cell *matCellDef="let maintenance" [ngStyle]="{'color': validPeriod(maintenance.date, maintenance.status) ? 'red' : 'black'}">
+                    {{maintenance.date | date:'yyyy-MM-dd' }} {{ validPeriod(maintenance.date, maintenance.status) ? '⚠️' : '' }}
                 </td>
             </ng-container>
 

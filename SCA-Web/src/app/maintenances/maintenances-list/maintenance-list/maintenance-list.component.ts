@@ -38,7 +38,13 @@ export class MaintenanceListComponent implements OnInit {
     return Status[status];
   }
 
-  validPeriod(dateMaintenance:Date){
+  validPeriod(dateMaintenance:Date, status:number){
+    if(status == 2)
+    {
+      return false;
+    }
+    
+
     let today = new Date();
     today.setHours(0,0,0,0);
     let date = new Date(dateMaintenance);

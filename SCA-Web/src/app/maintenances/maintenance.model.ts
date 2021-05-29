@@ -14,7 +14,7 @@ export enum Type{
 }
 
 export enum Status{
-    Pendente,
+    Agendada,
     Iniciada, 
     Concluída
 }
