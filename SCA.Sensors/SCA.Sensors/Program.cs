@@ -27,18 +27,21 @@ namespace SCA.Sensors
 
                         var date = DateTime.Now;
 
-                        var deslocamentoItaipu = random.Next(-10, 10);
-                        var piezometriaItaipu = random.Next(0, 10);
+                        var min = 0;
+                        var max = min + 10;
+
+                        var deslocamentoItaipu = random.Next(min, max);
+                        var piezometriaItaipu = random.Next(-5, 10);
                         var inclinometroItaipu = random.Next(-10, 10);
                         var aguaItaipu = random.Next(-20, 20);
 
                         var deslocamentoMascarenhas = random.Next(-10, 10);
-                        var piezometriaMascarenhas = random.Next(0, 10);
+                        var piezometriaMascarenhas = random.Next(-5, 10);
                         var inclinometroMascarenhas = random.Next(-10, 10);
                         var aguaMascarenhas = random.Next(-20, 20);
 
                         var deslocamentoSobradinho = random.Next(-10, 10);
-                        var piezometriaSobradinho = random.Next(0, 10);
+                        var piezometriaSobradinho = random.Next(-5, 10);
                         var inclinometroSobradinho = random.Next(-10, 10);
                         var aguaSobradinho = random.Next(-20, 20);
 

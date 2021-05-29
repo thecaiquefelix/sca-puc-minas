@@ -9,6 +9,7 @@
     <Folder Include="Interfaces\" />
     <Folder Include="Interfaces\Factory\" />
     <Folder Include="Interfaces\Repository\" />
+    <Folder Include="Enum\" />
     <Folder Include="DTO\" />
   </ItemGroup>
 </Project>

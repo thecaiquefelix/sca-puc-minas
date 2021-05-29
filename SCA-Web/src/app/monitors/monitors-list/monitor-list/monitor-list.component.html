@@ -11,6 +11,11 @@
                 </select>
             </mat-form-field>
         </div>
+        <div class="col" style="align-self: center;">
+            <br/>
+            <p  class="fa-blink message">{{messageDisplacement$}} {{messagePiezometer$}} {{messageInclinometer$}} {{messageWater$}}</p>
+        </div>
+
         <div class="col" style="align-self: center; text-align: end;">
             <button type="button" mat-raised-button color="primary" routerLink="/notifications/insert" >Enviar alerta 🚨</button>
         </div>

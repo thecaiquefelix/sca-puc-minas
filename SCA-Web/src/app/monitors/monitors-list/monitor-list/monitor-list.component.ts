@@ -4,6 +4,7 @@ import { interval, Observable } from 'rxjs';
 import { MonitorsService } from '../../monitors.service';
 import { Monitor } from '../../monitors.model';
 import { DatePipe } from '@angular/common';
+import { Status } from 'src/app/maintenances/maintenance.model';
 
 @Component({
   selector: 'app-monitor-list',
@@ -24,6 +25,11 @@ export class MonitorListComponent implements OnInit {
   inclinometer$: Monitor[] = [];
   water$: Monitor[] = [];
 
+  messageDisplacement$!: string;
+  messagePiezometer$!: string;
+  messageInclinometer$!: string;
+  messageWater$!: string;
+
   constructor(private monitorsService: MonitorsService, public datepipe: DatePipe) { }
 
   ngOnInit(){
@@ -36,20 +42,24 @@ export class MonitorListComponent implements OnInit {
 
   list(){
    
-    this.monitorsService.listDisplacement(this.selectedDam).subscribe((monitors) => {
-      this.displacement$ = monitors;
+    this.monitorsService.listDisplacement(this.selectedDam).subscribe((result) => {
+      this.displacement$ = result.monitors;
+      this.messageDisplacement$ = result.message;
     });
 
-    this.monitorsService.listPiezometer(this.selectedDam).subscribe((monitors) => {
-      this.piezometer$ = monitors;
+    this.monitorsService.listPiezometer(this.selectedDam).subscribe((result) => {
+      this.piezometer$ = result.monitors;
+      this.messagePiezometer$ = result.message;
     });
 
-    this.monitorsService.listInclinometer(this.selectedDam).subscribe((monitors) => {
-      this.inclinometer$ = monitors;
+    this.monitorsService.listInclinometer(this.selectedDam).subscribe((result) => {
+      this.inclinometer$ = result.monitors;
+      this.messageInclinometer$ = result.message;
     });
 
-    this.monitorsService.listWater(this.selectedDam).subscribe((monitors) => {
-      this.water$ = monitors;
+    this.monitorsService.listWater(this.selectedDam).subscribe((result) => {
+      this.water$ = result.monitors;
+      this.messageWater$ = result.message;
     });
 
   }

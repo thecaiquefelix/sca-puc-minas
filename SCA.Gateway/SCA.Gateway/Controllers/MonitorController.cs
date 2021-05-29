@@ -17,7 +17,7 @@ namespace SCA.Gateway.Controllers
         {
             var url = $"{baseURL}/api/v1/monitors/dam/{damId}/metric/{metricId}";
 
-            return await GetListAsync<Monitor>(url);
+            return await GetAsync<MonitorResponse>(url);
         }
 
     }

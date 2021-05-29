@@ -11,3 +11,9 @@ export enum DamId{
     Xingó = 2,
     FozdoAreia = 3
 }
+
+export enum Status{
+    Normal = 1,
+    Alerta = 2,
+    Critico = 3
+}

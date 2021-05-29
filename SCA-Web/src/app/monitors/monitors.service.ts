@@ -3,6 +3,12 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Monitor } from './monitors.model';
 
+export interface MonitorResponse
+{
+    monitors: Monitor[],
+    message:string
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -12,20 +18,20 @@ export class MonitorsService {
 
   constructor(private httpClient: HttpClient) { }
 
-  listDisplacement(dam:number):Observable<Monitor[]>{
-    return this.httpClient.get<Monitor[]>(`${this.baseURL}/api/v1/monitors/dam/${dam}/metric/1`);    
+  listDisplacement(dam:number):Observable<MonitorResponse>{
+    return this.httpClient.get<MonitorResponse>(`${this.baseURL}/api/v1/monitors/dam/${dam}/metric/1`);    
   }
 
-  listPiezometer(dam:number):Observable<Monitor[]>{
-    return this.httpClient.get<Monitor[]>(`${this.baseURL}/api/v1/monitors/dam/${dam}/metric/2`);
+  listPiezometer(dam:number):Observable<MonitorResponse>{
+    return this.httpClient.get<MonitorResponse>(`${this.baseURL}/api/v1/monitors/dam/${dam}/metric/2`);
   }
 
-  listInclinometer(dam:number):Observable<Monitor[]>{
-    return this.httpClient.get<Monitor[]>(`${this.baseURL}/api/v1/monitors/dam/${dam}/metric/3`);
+  listInclinometer(dam:number):Observable<MonitorResponse>{
+    return this.httpClient.get<MonitorResponse>(`${this.baseURL}/api/v1/monitors/dam/${dam}/metric/3`);
   }
 
-  listWater(dam:number):Observable<Monitor[]>{
-    return this.httpClient.get<Monitor[]>(`${this.baseURL}/api/v1/monitors/dam/${dam}/metric/4`);
+  listWater(dam:number):Observable<MonitorResponse>{
+    return this.httpClient.get<MonitorResponse>(`${this.baseURL}/api/v1/monitors/dam/${dam}/metric/4`);
   }
   
 }
