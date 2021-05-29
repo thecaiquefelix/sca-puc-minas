@@ -5,46 +5,49 @@
  </ng-template>
 
 <div class="componente-container">
-    <table mat-table [dataSource]="dataSource" matSort>
+
+    <div class="tableScroll">
+        <table mat-table [dataSource]="dataSource" matSort style="min-width: 800px;">
             
-        <ng-container matColumnDef="name"> 
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>Nome</th>
-            <td mat-cell *matCellDef="let asset">
-                <a routerLink="/assets/update/{{asset.id}}" style="color: #673ab7;">{{asset.name}}</a>
-            </td>
-        </ng-container>
-
-        <ng-container matColumnDef="manufacturer">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>Fabricante</th>
-            <td mat-cell *matCellDef="let asset">
-                {{ Manufacturer(asset.manufacturer)}}
-            </td>
-        </ng-container>
-
-        <ng-container matColumnDef="category">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>Categoria</th>
-            <td mat-cell *matCellDef="let asset">
-                {{ Category(asset.category) }}
-            </td>
-        </ng-container>
-
-        <ng-container matColumnDef="manufactureDate">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>Data fabricação</th>
-            <td mat-cell *matCellDef="let asset">
-                {{asset.manufactureDate | date:'yyyy-MM-dd' }}
-            </td>
-        </ng-container>
-
-        <ng-container matColumnDef="serial">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>Serial</th>
-            <td mat-cell *matCellDef="let asset">
-                {{asset.serial}}
-            </td>
-        </ng-container>
-
-        <tr mat-header-row *matHeaderRowDef="colunasTabela"></tr>
-        <tr mat-row *matRowDef="let row; columns: colunasTabela;"></tr>
-    </table>
+            <ng-container matColumnDef="name"> 
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Nome</th>
+                <td mat-cell *matCellDef="let asset">
+                    <a routerLink="/assets/update/{{asset.id}}" style="color: #673ab7;">{{asset.name}}</a>
+                </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="manufacturer">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Fabricante</th>
+                <td mat-cell *matCellDef="let asset">
+                    {{ Manufacturer(asset.manufacturer)}}
+                </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="category">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Categoria</th>
+                <td mat-cell *matCellDef="let asset">
+                    {{ Category(asset.category) }}
+                </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="manufactureDate">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Data fabricação</th>
+                <td mat-cell *matCellDef="let asset">
+                    {{asset.manufactureDate | date:'yyyy-MM-dd' }}
+                </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="serial">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Serial</th>
+                <td mat-cell *matCellDef="let asset">
+                    {{asset.serial}}
+                </td>
+            </ng-container>
+    
+            <tr mat-header-row *matHeaderRowDef="colunasTabela"></tr>
+            <tr mat-row *matRowDef="let row; columns: colunasTabela;"></tr>
+        </table>
+    </div>
 
     <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
 

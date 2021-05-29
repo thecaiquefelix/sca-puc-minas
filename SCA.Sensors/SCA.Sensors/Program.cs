@@ -27,8 +27,11 @@ namespace SCA.Sensors
 
                         var date = DateTime.Now;
 
-                        var min = 0;
+                        var min = 20;
                         var max = min + 10;
+
+
+
 
                         var deslocamentoItaipu = random.Next(min, max);
                         var piezometriaItaipu = random.Next(-5, 10);
