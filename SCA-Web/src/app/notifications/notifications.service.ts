@@ -16,4 +16,12 @@ export class NotificationsService {
     return this.httpClient.post<Notification>(`${this.baseURL}/${this.endpoint}`, notification);
   }
   
+  list():Observable<Notification[]>{
+    return this.httpClient.get<Notification[]>(`${this.baseURL}/${this.endpoint}`)
+  }
+
+  getById(id: number): Observable<Notification>{
+    return this.httpClient.get<Notification>(`${this.baseURL}/${this.endpoint}/${id}`); 
+  }
+
 }

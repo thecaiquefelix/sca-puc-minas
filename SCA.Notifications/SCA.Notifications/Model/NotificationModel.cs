@@ -1,6 +1,6 @@
-﻿namespace SCA.Gateway.Domain
+﻿namespace SCA.Notifications.Model
 {
-    public class Notification
+    public class NotificationModel
     {
         public int DamId { get; set; }
         public string Message { get; set; }

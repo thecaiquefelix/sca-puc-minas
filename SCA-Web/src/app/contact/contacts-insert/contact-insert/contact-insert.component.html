@@ -1,11 +1,11 @@
-<mat-toolbar>Envio de alerta 🚨</mat-toolbar>
+<mat-toolbar>Cadatro de contato</mat-toolbar>
 
 <ng-template #carregando>
     <mat-spinner></mat-spinner>
  </ng-template>
 
 <div class="componente-container">
-    <form class="form-padrao" *ngIf="formGroup" [formGroup]="formGroup" (ngSubmit)="formGroup.valid && send()" novalidate>      
+    <form class="form-padrao" *ngIf="formGroup" [formGroup]="formGroup" (ngSubmit)="formGroup.valid && save()" novalidate>      
 
         <mat-form-field>
             <select matNativeControl formControlName="damId" required>
@@ -17,13 +17,13 @@
         </mat-form-field>
 
         <mat-form-field>
-            <textarea matInput formControlName="message" placeholder="Mensagem que sera enviada..."></textarea>
+            <textarea matInput formControlName="phone" placeholder="Telefone"></textarea>
             <mat-error>Campo obrigatorio</mat-error>
         </mat-form-field>
 
         <div class="linha-botoes">
             <button mat-raised-button color="primary" [disabled]="!formGroup.valid">Enviar</button>
-            <button type="button" mat-raised-button color="primary" (click)="cancel()" >Cancelar</button>
+            <button type="button" mat-raised-button color="primary" routerLink="/notifications" >Cancelar</button>
         </div>
     </form>
 </div>

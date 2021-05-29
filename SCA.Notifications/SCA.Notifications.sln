@@ -3,6 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCA.Notifications", "SCA.Notifications\SCA.Notifications.csproj", "{2A02A303-354B-44DD-87BC-989BC0FA6D00}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Service", "1 - Service", "{ABABF50C-06F2-4E8A-8A7E-6F1F7800D91C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{925579C9-508E-402E-BA1D-166AD2C54B1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCA.Notifications.Application", "SCA.Application\SCA.Notifications.Application.csproj", "{4DD3C4DD-072A-480C-B84D-92CE11B924C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{85963115-356B-4B4B-999D-42FB9A59D2CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{1806B748-95CD-4F2C-A387-7A937C47BDBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCA.Notifications.Data", "SCA.Notifications.Data\SCA.Notifications.Data.csproj", "{CCEFB303-CEB7-4198-97A7-A5358484C213}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCA.Notifications.Domain", "SCA.Notifications.Domain\SCA.Notifications.Domain.csproj", "{738A471D-E593-455B-B7C9-06EC99086897}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +27,23 @@ Global
 		{2A02A303-354B-44DD-87BC-989BC0FA6D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A02A303-354B-44DD-87BC-989BC0FA6D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A02A303-354B-44DD-87BC-989BC0FA6D00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DD3C4DD-072A-480C-B84D-92CE11B924C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DD3C4DD-072A-480C-B84D-92CE11B924C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DD3C4DD-072A-480C-B84D-92CE11B924C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DD3C4DD-072A-480C-B84D-92CE11B924C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCEFB303-CEB7-4198-97A7-A5358484C213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCEFB303-CEB7-4198-97A7-A5358484C213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCEFB303-CEB7-4198-97A7-A5358484C213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCEFB303-CEB7-4198-97A7-A5358484C213}.Release|Any CPU.Build.0 = Release|Any CPU
+		{738A471D-E593-455B-B7C9-06EC99086897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{738A471D-E593-455B-B7C9-06EC99086897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{738A471D-E593-455B-B7C9-06EC99086897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{738A471D-E593-455B-B7C9-06EC99086897}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2A02A303-354B-44DD-87BC-989BC0FA6D00} = {ABABF50C-06F2-4E8A-8A7E-6F1F7800D91C}
+		{4DD3C4DD-072A-480C-B84D-92CE11B924C9} = {925579C9-508E-402E-BA1D-166AD2C54B1A}
+		{CCEFB303-CEB7-4198-97A7-A5358484C213} = {1806B748-95CD-4F2C-A387-7A937C47BDBE}
+		{738A471D-E593-455B-B7C9-06EC99086897} = {85963115-356B-4B4B-999D-42FB9A59D2CC}
 	EndGlobalSection
 EndGlobal

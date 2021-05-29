@@ -3,6 +3,13 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SCA.Notifications.Application.Interfaces;
+using SCA.Notifications.Application.Services;
+using SCA.Notifications.Data.Factory;
+using SCA.Notifications.Data.Options;
+using SCA.Notifications.Data.Repository;
+using SCA.Notifications.Domain.Interfaces.Factory;
+using SCA.Notifications.Domain.Interfaces.Repository;
 
 namespace SCA.Notifications
 {
@@ -18,6 +25,16 @@ namespace SCA.Notifications
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<DbOptions>(Configuration.GetSection("ConnectionStrings"));
+
+            services
+                .AddScoped<INotificationAppService, NotificationAppService>()
+                .AddScoped<IContactAppService, ContactAppService>()
+                .AddScoped<IDbProviderFactory, DbProviderFactory>()
+                .AddScoped<INotificationRepository, NotificationRepository>()
+                .AddScoped<IContactRepository, ContactRepository>()
+                .AddScoped<IConfigure, Data.Options.Config>();
+
             services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddSwaggerGen();

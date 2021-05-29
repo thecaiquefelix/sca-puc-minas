@@ -9,6 +9,7 @@
       <a mat-list-item routerLink="assets" *ngIf="enableMenu(['admin', 'maintenance'])">Ativos</a>
       <a mat-list-item routerLink="maintenances" *ngIf="enableMenu(['admin', 'maintenance'])">Manutenção</a>
       <a mat-list-item routerLink="monitors" *ngIf="enableMenu(['admin'])">Monitoração</a>
+      <a mat-list-item routerLink="notifications" *ngIf="enableMenu(['admin'])">Comunicação</a>
       <a mat-list-item (click)="logout()">Sair</a>
     </mat-nav-list>
   </mat-sidenav>

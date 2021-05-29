@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NotificationsService } from '../../notifications.service';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-notification-insert',
@@ -14,7 +15,8 @@ export class NotificationInsertComponent implements OnInit {
   
   constructor(private formBuilder: FormBuilder, 
               private notificationsService: NotificationsService,
-              private router: Router) { }
+              private router: Router,
+              private _location: Location) { }
 
   ngOnInit(){
     this.formGroup = this.formBuilder.group({
@@ -27,12 +29,17 @@ export class NotificationInsertComponent implements OnInit {
   {
     this.notificationsService.insert(this.formGroup.value).subscribe(
       notificationInserted => {
-        this.router.navigateByUrl("/monitors");
+        this._location.back();
       },
       error => {
         alert("Erro ao enviar o alerta");
       }
     )
+  }
+
+  cancel()
+  {
+    this._location.back();
   }
 
 }

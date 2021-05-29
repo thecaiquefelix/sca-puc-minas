@@ -13,11 +13,30 @@ namespace SCA.Gateway.Controllers
 
         [HttpPost]
         [Authorize(Roles = "admin")]
-        public async Task<IActionResult> SendAsync([FromBody] Notification notification)
+        public async Task<IActionResult> SendAsync([FromBody] NotificationRequest notification)
         {
             var url = $"{baseURL}/api/v1/notifications";
 
             return await PostAsync(url, notification);
+        }
+
+
+        [HttpGet]
+        [Authorize(Roles = "admin")]
+        public async Task<IActionResult> GetAllAsync()
+        {
+            var url = $"{baseURL}/api/v1/notifications";
+
+            return await GetListAsync<NotificationResponse>(url);
+        }
+
+        [HttpGet("{id:int}")]
+        [Authorize(Roles = "admin")]
+        public async Task<IActionResult> GetByIdAsync(int id)
+        {
+            var url = $"{baseURL}/api/v1/notifications/{id}";
+
+            return await GetAsync<NotificationResponse>(url);
         }
     }
 }
